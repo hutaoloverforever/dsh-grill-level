@@ -1,0 +1,8 @@
+# dsh-grill-level composition patch.
+#
+# Only the Host half is inserted here. The browser half (lib/client.js) is
+# discovered from package.json `dsh.client` and mounted by client-modules on
+# its own route; declaring it here would load it twice.
+- insert:
+    - id: dsh-grill-level
+      name: dsh-grill-level
